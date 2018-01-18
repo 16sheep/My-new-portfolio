@@ -17,3 +17,13 @@ This is project follows along [React Getting Started — The MERN Stack Tuto
 - [marked](https://www.npmjs.com/package/marked) - Markdown parser and compiler
 - [axios](https://github.com/axios/axios) -  Javascript library used to make http requests from node.js or XMLHttpRequests from the browser and it supports the Promise API that is native to JS ES6. Another feature that it has over .fetch() is that it performs automatic transforms of JSON data.
 
+## Issues
+
+- Suggested way to connect to database threw '''DeprecationWarning: `open()` is deprecated in mongoose >= 4.11.0, use `openUri()` instead, or set the `useMongoClient` option if using `connect()`. 
+Fixed by adding `useMongoClient`
+``` 
+    const options = {
+        useMongoClient: true 
+    }; 
+    mongoose.connect(uri, options);
+```
